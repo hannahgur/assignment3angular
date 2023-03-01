@@ -1,0 +1,45 @@
+p {
+  font-family: "Mansrope", sans-serif;
+}
+
+.catalogue-page {
+  display: flex;
+}
+
+/** NAV **/
+
+.catalogue-nav {
+  width: 26vw;
+  height: 100vh;
+  background-color: var(--blue);
+  color: white;
+}
+
+.pokemons-cnt {
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.header {
+  background-color: var(--lightblue);
+  height: 200px;
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.header img {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.header h1 {
+  font-weight: 800;
+  font-size: 60px;
+  font-family: "Pokemon Solid", sans-serif;
+}
+
+/** CATALOGUE CONTENT **/
+
+.catalogue-content {
+}
