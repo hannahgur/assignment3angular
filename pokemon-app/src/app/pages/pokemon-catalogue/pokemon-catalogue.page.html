@@ -1,1 +1,8 @@
-<p>pokemon-catalogue works!</p>
+<h1>Hello</h1>
+
+<ul>
+  <li *ngFor="let pokemon of pokemonList">
+    <p>{{ pokemon.name }}</p>
+    {{ pokemon.name }} - ID: {{ pokemon.id }}, Last Digit: {{ pokemon.lastDigit }}
+  </li>
+</ul>

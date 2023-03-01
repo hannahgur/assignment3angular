@@ -5,7 +5,6 @@ import { HttpClientModule} from "@angular/common/http"
 
 import { AppComponent } from './app.component';
 
-import { CatalogueNavComponent } from './components/catalogue-nav/catalogue-nav.component';
 import { CataloguePokeElemComponent } from './components/catalogue-poke-elem/catalogue-poke-elem.component';
 import { LandingPage } from './pages/landing/landing.page';
 import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
@@ -17,7 +16,7 @@ import { TrainerPage } from './pages/trainer/trainer.page';
     LandingPage,
     TrainerPage,
     PokemonCataloguePage,
-    CatalogueNavComponent,
+
     CataloguePokeElemComponent
   ],
   imports: [
