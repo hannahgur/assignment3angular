@@ -1,8 +1,9 @@
 export const environment = {
     production: true,
     apiTrainers: "",
-    apiPokemon: "",
+    apiPokemons: "https://pokeapi.co/api/v2/"
 
     apiKey: ""
+ 
 
 };

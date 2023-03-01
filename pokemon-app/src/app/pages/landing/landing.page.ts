@@ -13,5 +13,4 @@ export class LandingPage {
   handleLogin(): void {
     this.router.navigateByUrl("/pokemon")
   }
-
 }
