@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CataloguePage } from './pages/catalogue/catalogue.page';
-import { CollectionPage } from './pages/collection/collection.page';
-import { LoginPage } from './pages/login/login.page';
+
+import { LandingPage } from './pages/landing/landing.page';
+import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogue.page';
+import { TrainerPage } from './pages/trainer/trainer.page';
 
 const routes: Routes = [
   {
     path: "",
-    component: LoginPage
-  },
-  {
-    path: "pokedex",
-    component: CollectionPage
+    component: LandingPage
   },
   {
     path: "catalogue",
-    component: CataloguePage
+    component: PokemonCataloguePage
+  },
+  {
+    path: "trainer",
+    component: TrainerPage
 
   }
 ];
