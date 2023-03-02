@@ -1,0 +1,41 @@
+.login-input {
+    width: 250px;
+    height: 150px;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.login-title {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 10px;
+    font-family: "Mansrope", sans-serif;
+}
+
+input{
+    width: 250px;
+    height: 40px;
+    border-style: none;
+    text-align: center;
+}
+
+.login-button {
+    width: 250px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 1em;
+    background-color: var(--lightblue);
+    border-style: solid;
+    border-color: var(--yellow);
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
+    transition-duration: 0.4s;
+}
+
+.login-button:hover {
+    background-color: var(--yellow);
+    color: white;
+  }
+

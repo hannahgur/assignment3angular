@@ -1,13 +1,22 @@
-<form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
-    <fieldset>
-        <label for="username">Username</label>
-        <input type="text" 
-            ngModel 
-            #username="ngModel" 
-            name="username" 
-            id="username" 
-            placeholder="Enter a username"
-        />
-    </fieldset>
-    <button type="submit">Login</button>
-</form>
+<div class="login-input"> 
+  <form #loginForm="ngForm" (ngSubmit)="loginSubmit(loginForm)">
+            
+                <div class="login-title">
+                    <h4>Username</h4>
+                </div>
+
+                <fieldset>
+                    <input type="text" 
+                        ngModel 
+                        #username="ngModel" 
+                        name="username" 
+                        id="username" 
+                        placeholder="Enter your name"
+                    />
+                </fieldset>
+        
+            <button class="login-button" type="submit">Login</button>
+        
+    </form>
+</div>
+
