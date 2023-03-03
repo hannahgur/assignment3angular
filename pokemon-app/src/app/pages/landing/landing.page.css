@@ -1,0 +1,32 @@
+.landing-page {
+    height: 400px;
+    width: 350px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: var(--lightblue);
+    border-radius: 1em;
+    box-shadow: 10px 10px 5px rgb(183, 197, 202);
+}
+
+.landing-header {
+    padding: 20px;
+}
+
+.landing-header h1 {
+    font-family: "Pokemon Solid", sans-serif;
+    color: var(--yellow);
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 4px 4px var(--blue);
+    
+}
+
+.landing-form {
+    margin: auto;
+    height: 245px;
+    border-radius: 0em 0em 1em 1em;
+    border-style: solid;
+    border-color: var(--blue);
+    background-color: var(--blue);
+}
+
