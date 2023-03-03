@@ -4,6 +4,7 @@ import { Trainer } from 'src/app/models/trainer.model';
 import { LoginService } from 'src/app/services/login.service';
 import { TrainerService } from 'src/app/services/trainer.service';
 
+// Login form component
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -18,6 +19,7 @@ export class LoginFormComponent {
       private readonly trainerService: TrainerService
     ) {}
 
+  // Handles a visitor trying to log in
   public loginSubmit(loginForm: NgForm): void {
 
     const { username } = loginForm.value;

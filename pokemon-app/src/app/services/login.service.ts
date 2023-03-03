@@ -6,6 +6,8 @@ import { Trainer } from '../models/trainer.model';
 
 const { apiTrainers, apiKey } = environment
 
+
+// Service for managing login
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +15,7 @@ export class LoginService {
 
   constructor(private readonly http: HttpClient) { }
 
+  // Attempts login
   public login(username: string): Observable<Trainer> {
     return this.checkUsername(username)
      .pipe(
@@ -25,6 +28,7 @@ export class LoginService {
      )
   }
 
+  // Check if username exists
   private checkUsername(username: string): Observable<Trainer | undefined> {
     return this.http.get<Trainer[]>(`${apiTrainers}?username=${username}`)
       .pipe(
@@ -32,6 +36,7 @@ export class LoginService {
       )
   }
 
+  // Create new trainer if username does not exist
   private createTrainer(username: string): Observable<Trainer> {
     const trainer = {
       username,

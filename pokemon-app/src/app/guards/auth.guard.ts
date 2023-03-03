@@ -3,6 +3,8 @@ import { ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree } from '@a
 import { Observable } from 'rxjs';
 import { TrainerService } from '../services/trainer.service';
 
+
+// Auth, navigate trainer back to login if not permitted access
 @Injectable({
   providedIn: 'root'
 })
@@ -15,6 +17,7 @@ export class AuthGuard {
 
   }
 
+  // Redirects if no trainer stored
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {

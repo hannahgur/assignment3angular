@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
+// Service for managing the pokemon catalogue
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +13,7 @@ export class CatalogueService {
 
   constructor(private http: HttpClient) { }
 
+  // Get a list of 100 pokemon from the pokemon API
   getPokemonList(): Observable<any> {
     return this.http.get<any>(`${this.apiEndpoint}/pokemon?limit=100`).pipe(
       map((response) => {

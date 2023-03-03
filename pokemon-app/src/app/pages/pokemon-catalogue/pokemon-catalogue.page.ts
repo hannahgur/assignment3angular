@@ -5,6 +5,8 @@ import { environment } from 'src/environments/environment.development';
 
 const { apiKey, apiTrainers } = environment 
 
+
+// Pokemon catalogue page
 @Component({
   selector: 'app-pokemon-catalogue',
   templateUrl: './pokemon-catalogue.page.html',
@@ -30,6 +32,8 @@ export class PokemonCataloguePage implements OnInit {
     });
   }
 
+
+  // Handle a card being clicked
   onCardClick(id: number) {
     const index = this.flippedCardIds.indexOf(id);
     if (index > -1) {
@@ -39,6 +43,8 @@ export class PokemonCataloguePage implements OnInit {
     }
   }
 
+
+  // Handle the trainer trying to catch the selected pokemon
   catchPokemon() {
     
     const sessionData: any = sessionStorage.getItem('pokemon-trainer');
@@ -69,6 +75,7 @@ export class PokemonCataloguePage implements OnInit {
     this.items = [];
   }
 
+  // Update the array of selected pokemon
   updateItem(item: any) {
     const index = this.items.findIndex((pokemon) => pokemon.id === item.id);
     if (index > -1) {
@@ -82,6 +89,8 @@ export class PokemonCataloguePage implements OnInit {
     }
   }
 
+
+  // Remove a pokemon from the list of selected
   removeItem(item: any) {
     const index = this.items.indexOf(item);
     if (index > -1) {

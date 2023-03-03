@@ -1,3 +1,4 @@
+// Sessions storage utilities
 export class StorageUtil {
 
     public static storageSave<T>(key: string, value: T): void {
