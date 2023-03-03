@@ -1,6 +1,6 @@
 export const environment = {
     production: false,
-    apiTrainers: "",
+    apiTrainers: "https://mkb-noroff-api.herokuapp.com/trainers",
     apiPokemons: "https://pokeapi.co/api/v2/",
-    apiKey: ""
+    apiKey: "KvgEBVWGhEimxKi3IuvDyg=="
 };
