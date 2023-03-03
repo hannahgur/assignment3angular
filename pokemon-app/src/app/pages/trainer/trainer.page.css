@@ -9,7 +9,8 @@ p {
 /** NAV **/
 
 .catalogue-nav {
-  width: 26vw;
+  min-width: 530px;
+  max-width: 530px;
   height: 100vh;
   background-color: var(--blue);
   color: white;
@@ -39,7 +40,56 @@ p {
   font-family: "Pokemon Solid", sans-serif;
 }
 
+.catched-cnt:hover { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--lightblue);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pokemons-cnt {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+
+.pokemon-cath img{
+  width: 120px;
+}
+
+.pokemon-cath img:hover pokemon-cath{
+  background-color: var(--lightblue);
+  width: 125px;
+}
+
 /** CATALOGUE CONTENT **/
 
 .catalogue-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.catalogue-content img {
+  width: 400px;
+}
+
+.catalogue-content h2 {
+  font-family: 'Mansrope', sans-serif;
+  font-size: 40px;
+  color: var(--blue);
+  letter-spacing: 5px;
+  margin-top: 30px;
+   font-variant-caps: all-small-caps;
+  font-weight: 600;
+}
+
+.selectedData-cnt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
