@@ -10,8 +10,9 @@ import { PokemonCataloguePage } from './pages/pokemon-catalogue/pokemon-catalogu
 import { TrainerPage } from './pages/trainer/trainer.page';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
-import { CatalogueNavComponent } from './components/catalogue-nav/catalogue-nav.component';
+
 import { CataloguePokeElemComponent } from './components/catalogue-poke-elem/catalogue-poke-elem.component';
+import { PokemoncardComponent } from './components/pokemoncard/pokemoncard.component';
 
 
 @NgModule({
@@ -21,8 +22,9 @@ import { CataloguePokeElemComponent } from './components/catalogue-poke-elem/cat
     PokemonCataloguePage,
     TrainerPage,
     LoginFormComponent,
-    CatalogueNavComponent,
-    CataloguePokeElemComponent
+    CataloguePokeElemComponent,
+    PokemoncardComponent,
+
   ],
   imports: [
     BrowserModule,
