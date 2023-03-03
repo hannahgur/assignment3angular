@@ -41,34 +41,42 @@
       </div>
     </div>
   </div>
+
   <div class="catalogue-content">
-    <div class="pokemons-cnt">
-      <div *ngFor="let pokemon of filteredPokemonList">
-        <div
-          class="flip-card" [ngClass]="{ flipped: flippedCardIds.includes(pokemon.id) }"
-        >
-          <div class="flip-card-inner">
-            <div
-              class="flip-card-front pokemoncard"
-              (click)="onCardClick(pokemon.id)"
-              (click)="updateItem(pokemon)"
-              
-            >
-              <div [ngClass]="filledClasses[pokemon.id]"></div>
-              <div class="img-bg">
-                <img
-                  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon.id }}.png"
-                  alt=""
-                />
-              </div>
-              <div class="pokemoncard-data">
-                <div class="header_pokemon">
-                  <p class="pokemonname">{{pokemon.pokemon.name}}</p>
+    <div class="head-cnt">
+        <input type="text" [(ngModel)]="searchQuery" placeholder="Search..." />
+      </div>
+    <div class="pokemons-holder">
+      
+
+      <div class="pokemons-cnt">
+        <div *ngFor="let pokemon of filteredPokemonList">
+          <div
+            class="flip-card"
+            [ngClass]="{ flipped: flippedCardIds.includes(pokemon.id) }"
+          >
+            <div class="flip-card-inner">
+              <div
+                class="flip-card-front pokemoncard"
+                (click)="onCardClick(pokemon.id)"
+                (click)="updateItem(pokemon)"
+              >
+                <div [ngClass]="filledClasses[pokemon.id]"></div>
+                <div class="img-bg">
+                  <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon.id }}.png"
+                    alt=""
+                  />
+                </div>
+                <div class="pokemoncard-data">
+                  <div class="header_pokemon">
+                    <p class="pokemonname">{{pokemon.pokemon.name}}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="flip-card-back" (click)="onCardClick(pokemon.id)">
-              <img src="../../../assets/cardback.png" alt="card" />
+              <div class="flip-card-back" (click)="onCardClick(pokemon.id)">
+                <img src="../../../assets/cardback.png" alt="card" />
+              </div>
             </div>
           </div>
         </div>

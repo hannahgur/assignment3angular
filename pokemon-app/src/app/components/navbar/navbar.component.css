@@ -1,0 +1,36 @@
+.navbar {
+    padding: 50px 0px 0px 0px;
+
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    text-align: end;
+
+}
+
+.nav-content {
+    margin-right: 200px;
+}
+
+.nav-content a {
+    text-decoration: none;
+    color: var(--blue);
+    font-family: 'Mansrope', sans-serif;
+    display: block;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.navlinks a:hover {
+    color: var(--lightblue);
+}
+
+.navlinks {
+    display: flex;
+    justify-content: flex-end;
+      list-style-type: none;
+      
+}

@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { CataloguePokeElemComponent } from './components/catalogue-poke-elem/catalogue-poke-elem.component';
 import { PokemoncardComponent } from './components/pokemoncard/pokemoncard.component';
 import { CataloguePokeListComponent } from './components/catalogue-poke-list/catalogue-poke-list.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CataloguePokeListComponent } from './components/catalogue-poke-list/cat
     CataloguePokeElemComponent,
     PokemoncardComponent,
     CataloguePokeListComponent,
+    NavbarComponent,
 
   ],
   imports: [

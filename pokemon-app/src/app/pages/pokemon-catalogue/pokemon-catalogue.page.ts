@@ -65,6 +65,8 @@ export class PokemonCataloguePage implements OnInit {
         console.log(updatedUser);
       })
       .catch((error) => {});
+
+    this.items = [];
   }
 
   updateItem(item: any) {
