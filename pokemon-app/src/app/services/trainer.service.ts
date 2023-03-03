@@ -4,15 +4,16 @@ import { Trainer } from '../models/trainer.model';
 import { StorageUtil } from '../utils/storage.util';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
+const { apiTrainers } = environment
+
+// Service for managing pokemon trainer data
 @Injectable({
   providedIn: 'root',
 })
 export class TrainerService {
   private trainer?: Trainer;
-  private readonly baseUrl = 'https://mkb-noroff-api.herokuapp.com/trainers';
 
   public get getTrainer(): Trainer | undefined {
     return this.trainer;
@@ -30,9 +31,9 @@ export class TrainerService {
   apiKey = environment.apiKey;
   apiEndpoint = environment.apiTrainers;
   
-
+  // Retrieves a trainer by their ID from the API
   public getTrainerById(id: number): Observable<Trainer> {
-    const url = `${this.baseUrl}/${id}`;
+    const url = `${apiTrainers}/${id}`;
     return this.http.get<Trainer>(url);
   }
 }

@@ -3,6 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Trainer } from 'src/app/models/trainer.model';
 import { TrainerService } from 'src/app/services/trainer.service';
 
+
+// Trainer page
 @Component({
   selector: 'app-trainer',
   templateUrl: './trainer.page.html',
@@ -23,6 +25,7 @@ export class TrainerPage implements OnInit {
   dataObject = JSON.parse(this.sessionData);
   id = this.dataObject.id;
 
+  // Show details of the selected pokemon
   showPokemonDetails(pokemon: any) {
     this.selectedPokemon = pokemon;
   }

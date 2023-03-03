@@ -15,7 +15,7 @@
 ## About The Project
 #### Login: sign in using username
 
-You cant access any pages without login first. There is no registration, but there is created a account when writing in your desired username
+You cant access any pages besides the login page without logging in first. There is no registration, but there is created an account when writing in your desired username
 
 
 #### Catalogue: Catching the pokemons
@@ -23,11 +23,11 @@ You cant access any pages without login first. There is no registration, but the
 
 Functionalities:
 * Select the pokemons you want to catch
-* Press the cathc button to send them to your pokedex
+* Press the catch button to send them to your pokedex
 
 #### Pokedex: List of the collected pokemons
 
-Overview of the collected pokemons with a image and the name
+Overview of your collected pokemons with a image and their name
 
 
 ### Project By
