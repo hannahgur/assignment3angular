@@ -12,14 +12,14 @@ export class CatalogueService {
   constructor(private http: HttpClient) { }
 
   getPokemonList(): Observable<any> {
-    return this.http.get<any>(`${this.apiEndpoint}/pokemon?limit=20`).pipe(
+    return this.http.get<any>(`${this.apiEndpoint}/pokemon?limit=100`).pipe(
       map((response) => {
         return response.results.map((pokemon: any, index: number) => {
           console.log(pokemon);
           
           const id = index + 1;
-          const lastDigit = id % 10;
-          return { id, lastDigit, name: pokemon.name, pokemon };
+  
+          return { id, name: pokemon.name, pokemon: pokemon};
         });
       })
     );

@@ -12,6 +12,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { FormsModule } from '@angular/forms';
 
 import { CataloguePokeElemComponent } from './components/catalogue-poke-elem/catalogue-poke-elem.component';
+import { PokemoncardComponent } from './components/pokemoncard/pokemoncard.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CataloguePokeElemComponent } from './components/catalogue-poke-elem/cat
     PokemonCataloguePage,
     TrainerPage,
     LoginFormComponent,
-    CataloguePokeElemComponent
+    CataloguePokeElemComponent,
+    PokemoncardComponent,
+
   ],
   imports: [
     BrowserModule,

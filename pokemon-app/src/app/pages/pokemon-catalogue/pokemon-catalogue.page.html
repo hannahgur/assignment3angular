@@ -1,8 +1,78 @@
-<h1>Hello</h1>
+<div class="catalogue-page">
+  <div class="catalogue-nav">
+    <div class="header">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png"
+        alt=""
+        class="pokeball"
+      />
+      <h1>Catalogue</h1>
+    </div>
 
-<ul>
-  <li *ngFor="let pokemon of pokemonList">
-    <p>{{ pokemon.name }}</p>
-    {{ pokemon.name }} - ID: {{ pokemon.id }}, Last Digit: {{ pokemon.lastDigit }}
-  </li>
-</ul>
+    <div class="catched-pokemons-holder">
+      <div *ngFor="let pokemon of items">
+        <div class="catch-pokemon">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon.id }}.png"
+            alt=""
+          />
+          <div class="catch-data">
+            <p>{{pokemon.name}}</p>
+          </div>
+
+          <div class="remove-catch-cnt">
+            <button class="remove-catched-btn" (click)="removeItem(pokemon)">
+              X
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalogue-nav-data">
+      <div class="catch-button-cnt">
+        <button class="catch-button" (click)="catchPokemon()">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Pokebola-pokeball-png-0.png"
+            alt=""
+            class="pokeball"
+          />CATCH
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="catalogue-content">
+    <div class="pokemons-cnt">
+      <div *ngFor="let pokemon of filteredPokemonList">
+        <div
+          class="flip-card" [ngClass]="{ flipped: flippedCardIds.includes(pokemon.id) }"
+        >
+          <div class="flip-card-inner">
+            <div
+              class="flip-card-front pokemoncard"
+              (click)="onCardClick(pokemon.id)"
+              (click)="updateItem(pokemon)"
+              
+            >
+              <div [ngClass]="filledClasses[pokemon.id]"></div>
+              <div class="img-bg">
+                <img
+                  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon.id }}.png"
+                  alt=""
+                />
+              </div>
+              <div class="pokemoncard-data">
+                <div class="header_pokemon">
+                  <p class="pokemonname">{{pokemon.pokemon.name}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back" (click)="onCardClick(pokemon.id)">
+              <img src="../../../assets/cardback.png" alt="card" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
