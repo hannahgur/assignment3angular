@@ -1,4 +1,3 @@
-<div class="pokemon-elem">
-    <img src="https://surpriseworld-i01.mycdn.no/mysimgprod/surpriseworld_mystore_no/images/26167_Pikachu___Kakebilde__A4_1.png/w1200h1128.png" alt="test">
-    <p class="pokemon-name">Pokemon1</p>
-</div>
+<li *ngIf="pokemon" class="pokemon-elem">
+    <span>{{pokemon.name}}</span>
+</li>

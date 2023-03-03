@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { CatalogueService } from '../../services/catalogue.service';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.development';
+
+const { apiKey, apiTrainers } = environment 
 
 @Component({
   selector: 'app-pokemon-catalogue',
@@ -38,16 +40,15 @@ export class PokemonCataloguePage implements OnInit {
   }
 
   catchPokemon() {
-    const apiURL = 'https://mkb-noroff-api.herokuapp.com';
-
+    
     const sessionData: any = sessionStorage.getItem('pokemon-trainer');
     const dataObject = JSON.parse(sessionData);
     const id = dataObject.id;
 
-    fetch(`${apiURL}/translations/${id}`, {
+    fetch(`${apiTrainers}/${id}`, {
       method: 'PATCH',
       headers: {
-        'X-API-Key': this.apiKey,
+        'X-API-Key': apiKey,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
@@ -56,7 +57,7 @@ export class PokemonCataloguePage implements OnInit {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Could not update translations history');
+          throw new Error('Could not update caught pokemons');
         }
         return response.json();
       })
