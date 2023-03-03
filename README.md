@@ -8,9 +8,6 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
-    <li>
-      <a href="#prerequisites">Prerequisites</a>
-    </li>
     <li><a href="#project-by">Project By</a></li>
   </ol>
 </details>
