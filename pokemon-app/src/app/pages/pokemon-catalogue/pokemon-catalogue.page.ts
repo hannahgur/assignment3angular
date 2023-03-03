@@ -44,7 +44,7 @@ export class PokemonCataloguePage implements OnInit {
     const dataObject = JSON.parse(sessionData);
     const id = dataObject.id;
 
-    fetch(`${apiURL}/translations/${id}`, {
+    fetch(`${apiURL}/trainers/${id}`, {
       method: 'PATCH',
       headers: {
         'X-API-Key': this.apiKey,
@@ -64,6 +64,8 @@ export class PokemonCataloguePage implements OnInit {
         console.log(updatedUser);
       })
       .catch((error) => {});
+
+    this.items = [];
   }
 
   updateItem(item: any) {

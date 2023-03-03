@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 
 import { CataloguePokeElemComponent } from './components/catalogue-poke-elem/catalogue-poke-elem.component';
 import { PokemoncardComponent } from './components/pokemoncard/pokemoncard.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PokemoncardComponent } from './components/pokemoncard/pokemoncard.compo
     LoginFormComponent,
     CataloguePokeElemComponent,
     PokemoncardComponent,
+    NavbarComponent,
 
   ],
   imports: [
